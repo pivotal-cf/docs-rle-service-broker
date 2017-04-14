@@ -1,30 +1,31 @@
 ---
-title: Installing and Configuring the Redis Pack Service Broker
+title: Installing and Configuring the Redis Enterprise Pack
 owner: Partners
 ---
 
 This topic describes how to install and configure Redis<sup>e</sup> Pack (RP) Service Broker, as well as how to create an instance of the Redis<sup>e</sup> Pack service from the Marketplace of your Pivotal Cloud Foundry (PCF) deployment.
 
+To use the Redis<sup>e</sup> Pack Service Broker, you first need to install Redis<sup>e</sup> Pack and create a cluster using the PCF Ops Manager. Once you have that, then you can create a database using Apps Manager. Both are detailed below.
+
 ##<a id='installing-rp'></a>Install Redis<sup>e</sup> Pack
 
-To use the Redis<sup>e</sup> Pack Service Broker, you must have a Redis<sup>e</sup> Pack cluster already deployed. Configuring the Redis<sup>e</sup> Pack Service Broker requires a Redis<sup>e</sup> Pack admin account username and password, as well as the URL of your RP cluster.
-
-To download and install Redis<sup>e</sup> Pack, follow the instructions in the [RP documentation](https://redislabs.com/redis-enterprise-documentation/installing-and-upgrading/accessing-and-installing-the-setup-package). RP is available as an Amazon Web Services AMI or as an installation package for Ubuntu and Red Hat / CentOS.
-
-For more information about how to install Redis<sup>e</sup> Pack and create a cluster, see the [RP documentation](https://redislabs.com/redis-enterprise-documentation/overview).
-
-##<a id="installing-broker"></a> Install the Redis<sup>e</sup> Pack Service Broker
-
 1. Download the product file from [Pivotal Network](https://network.pivotal.io/products/redis-labs-enterprise-cluster-for-pcf-service-broker).
-1. Upload the product file on the Ops Manager Installation Dashboard.
-1. Click **Add** next to the uploaded RP Service Broker in the Ops Manager **Available Products** view to add it to your staging area.
-1. Click the newly added tile.
+1. Upload the product file on the Ops Manager Installation Dashboard by clicking on **Import a Product**.
+1. Click **+** next to the uploaded Redis Enterprise Pack Service Broker in the Ops Manager **Available Products** view to add it to your staging area.<br />
+![Import button](./images/pcf_import_plus.png)
+1. Click the newly added tile.<br /> ![Import button](./images/pcf_pre-install_tile.png)
 1. From the **Settings** tab, click **Redis<sup>e</sup> Pack** and complete the following fields:
     * **Redis<sup>e</sup> Pack admin account username**: Enter the email address you used to create the Redis<sup>e</sup> Pack cluster.
     * **Redis<sup>e</sup> Pack admin account password**: Enter the password you used to create the Redis<sup>e</sup> Pack cluster.
     * **Redis<sup>e</sup> Pack address**: Enter the Cluster Name (FQDN) of the RP cluster as you provided it when you created the cluster, in the following format: `https://YOUR-CLUSTER-NAME:9443`.
+
+    ![Import button](./images/pcf_rp_config_full_screen.png)
 1. Click **Save**.
-1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install the Redis<sup>e</sup> Pack Service Broker.
+1. Return to the Ops Manager by clicking on **Installation Dashboard**<br />![Import button](./images/pcf_post-config-click.png)
+1. Click **Apply Changes** to install the Redis<sup>e</sup> Pack Service Broker.<br />![Import button](./images/post-install-dashboard.png)
+1. Ops Manager will run through its process to install everything for you.
+
+For more information about Redis<sup>e</sup> Pack in general, please [see their documentation site](https://redislabs.com/redis-enterprise-documentation/overview/)
 
 ##<a id='create-db'></a> Create a Redis Database in Apps Manager
 
@@ -33,8 +34,9 @@ After installing the Redis<sup>e</sup> Pack Service Broker, Redis<sup>e</sup> Pa
 Follow the instructions below to create a Redis Labs Enterprise Cluster service instance using Apps Manager.
 
 1. Navigate to Apps Manager in a browser and log in.
-1. Click **Marketplace**.
-1. Click **Redis<sup>e</sup> Pack**.
+1. Click **Services**.
+1. Click **Add Services** button.
+1. Click **Redis<sup>e</sup> Pack** or **Redis Labs Enterprise Cluster** from the list of services.
 1. Choose one of the four preconfigured database plans and click **Select this plan**. For more information about the preconfigured plans, see the [Overview](index.html#overview).
 1. In the **Configure Instance** form, enter an **Instance Name** to identify the service instance in the deployment as well as the database name in RP. To override the default parameters and provide additional database configuration parameters, click **Show Advanced Options**. Contact support@redislabs.com for further instructions on using this feature.
 1. Once you create the service and bind it to an app, you can find the credentials in the `VCAP_SERVICES` environment variable in the following format:

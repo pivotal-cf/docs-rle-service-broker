@@ -1,9 +1,9 @@
 ---
-title: Redis Pack Service Broker for Pivotal Cloud Foundry
+title: Redis Pack for Pivotal Cloud Foundry
 owner: Partners
 ---
 
-This documentation describes the Redis<sup>e</sup> Pack (RP) Service Broker for Pivotal Cloud Foundry (PCF). The RP Service Broker registers a service broker on PCF and exposes its service plans on the Marketplace. Developers can provision Redis databases by creating instances of the service plans using Apps Manager or the cf Command Line Interface (CLI).
+This documentation describes the Redis<sup>e</sup> Pack (RP) for Pivotal Cloud Foundry (PCF). The RP Service Broker registers a service broker on PCF and exposes its service plans on the Marketplace. Developers can provision Redis databases by creating instances of the service plans using Apps Manager or the cf Command Line Interface (CLI).
 
 ## <a id="overview"></a> Overview
 
@@ -16,7 +16,7 @@ The Redis<sup>e</sup> Pack Service Broker exposes four service plans on the Mark
 * Redis clustered database: multiple master shards.
 * Highly-available Redis clustered database: multiple master shards each with its own slave shard, or multiple master/multi-slave shards.
 
-For more information, see the [RP documentation](https://redislabs.com/redis-enterprise-documentation/overview/).
+For more information, see the [Redis<sup>e</sup> Pack documentation](https://redislabs.com/redis-enterprise-documentation/overview/).
 
 ## <a id="snapshot"></a>Product Snapshot
 
@@ -34,16 +34,22 @@ For more information, see the [RP documentation](https://redislabs.com/redis-ent
 
 ## <a id="reqs"></a>Requirements
 
-To use the Redis<sup>e</sup> Pack Service Broker, you must have a RP cluster already deployed. See the [Installing and Configuring the Redis<sup>e</sup> Pack Service Broker](installing.html) topic for more information.
+To use the Redis<sup>e</sup> Pack Service Broker, you must have a RP cluster already deployed. To do this, see the [Installing and Configuring the Redis<sup>e</sup> Pack Service Broker](installing.html) topic for more information.
+
+Redis<sup>e</sup> Pack Service for Pivotal Cloud Foundry requires a valid license from Redis Labs for the Redis<sup>e</sup> Pack cluster.
 
 ## <a id="feedback"></a>Feedback
 
 Please provide any bugs, feature requests, or questions to the [Pivotal Cloud Foundry Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@redislabs.com.
 
+## <a id='limitations'></a>Limitations
+
+At this time, Redis<sup>e</sup> Pack Service for Pivotal Cloud Foundry is limited to one cluster per deployment.
+
 ## <a id='release-notes'></a>Release Notes
 
-This is the first version of the RP Service Broker.
+This is the first version of the Redis<sup>e</sup> Pack Service Broker.
 
 ## <a id='license'></a>License
 
-Customers interested in using Redis<sup>e</sup> Pack can download and install it from [Redis Labs](https://redislabs.com/redis-enterprise) under the free license limitations. To obtain a production license and support, contact a Redis Labs sales representative at sales@redislabs.com.
+Customers interested in using Redis<sup>e</sup> Pack can download and install it from [Redis Labs](https://redislabs.com/redis-enterprise) under the trial license limitations. To obtain a production license and support, contact a Redis Labs sales representative at sales@redislabs.com.
