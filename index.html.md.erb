@@ -5,7 +5,8 @@ owner: Partners
 
 This documentation describes the Redis<sup>e</sup> Pack (RP) Service Broker for Pivotal Cloud Foundry (PCF). The RP Service Broker registers a service broker on PCF and exposes its service plans on the Marketplace. Developers can provision Redis databases by creating instances of the service plans using Apps Manager or the Cloud Foundry Command Line Interface (cf CLI).
 
-<p class="note">Note: 5.0.0 is considered a beta release of Redis<sup>e</sup> Pack and is not meant for production use.</p>
+<p class="note warning"><strong>WARNING:</strong> Redis<sup>e</sup> Pack Service Broker for PCF v5.0.0 Beta is not intended for production use.
+   For production use, Redis Labs recommends Redis<sup>e</sup> Pack Service Broker for PCF v1.6.5.</p>
 
 ## <a id="overview"></a> Overview
 
@@ -33,7 +34,7 @@ The following table provides version and version-support information about Redis
     </tr>
     <tr>
         <td>Release date</td>
-        <td>Sept 14, 2017</td>
+        <td>September 14, 2017</td>
     </tr>
     <tr>
         <td>Software component version</td>
@@ -55,9 +56,10 @@ The following table provides version and version-support information about Redis
 
 ## <a id="reqs"></a>Requirements
 
-To use the Redis<sup>e</sup> Pack Service Broker, you must have a RP cluster already deployed. To do this, see the [Installing and Configuring the Redis<sup>e</sup> Pack Service Broker](installing.html) topic for more information.
+To use the Redis<sup>e</sup> Pack Service Broker, you must have a RP cluster already deployed.
+To do this, see [Installing and Configuring the Redis<sup>e</sup> Pack Service Broker](installing.html) for more information.
 
-Redis<sup>e</sup> Pack Service Broker for Pivotal Cloud Foundry requires a valid license from Redis Labs for the Redis<sup>e</sup> Pack cluster.
+Redis<sup>e</sup> Pack Service Broker for PCF requires a valid license from Redis Labs for the Redis<sup>e</sup> Pack cluster.
 
 ## <a id="feedback"></a>Feedback
 
@@ -65,20 +67,21 @@ Please provide any bugs, feature requests, or questions to the [Pivotal Cloud Fo
 
 ## <a id='limitations'></a>Limitations
 
-At this time, Redis<sup>e</sup> Pack Service for Pivotal Cloud Foundry is limited to one cluster per deployment.
+At this time, Redis<sup>e</sup> Pack Service for PCF is limited to one cluster per deployment.
 
 ## <a id='release-notes'></a>Release Notes
 
-In this version of the Redis<sup>e</sup> Pack Service Broker.
-=======
-There are five main features to highlight in this preview:
-1. Geo-distributed, Active-Active Redis Applications with Conflict-free Replicated Databases (CRDBs)
-1. Fast Search and Query in Redis with in-memory Indexing
-1. Native JSON processing in Redis
-1. Integrated Administrative Account Management with LDAP
-1. Integrated support for Redis' Cluster API
+In this version of the Redis<sup>e</sup> Pack Service Broker,
+there are five main features to highlight in this preview:
 
-In addition to these top features, Redis Enterprise Pack 5.0 also brings additional modules for indexing with bloom filters and many other improvements in core performance, scale, and high availability of general Redis applications.
+1. Geo-distributed, active-active Redis apps with conflict-free replicated databases (CRDBs)
+1. Fast search and query in Redis with in-memory indexing
+1. Native JSON processing in Redis
+1. Integrated administrative account management with LDAP
+1. Integrated support for Redis Cluster API
+
+In addition to these top features, Redis Enterprise Pack 5.0 also brings additional modules
+for indexing with bloom filters and many other improvements in core performance, scale, and high availability of general Redis apps.
 
 For this release, the tile version has been updated to match the version number of Redis<sup>e</sup> Pack itself.
 
@@ -87,6 +90,6 @@ For this release, the tile version has been updated to match the version number 
 For those interested in using Redis<sup>e</sup> Pack please go to [Redis Labs](https://redislabs.com/redis-enterprise). You are welcome to use Redis<sup>e</sup> Pack under the trial license limitations. To obtain a production license and support, contact a Redis Labs sales representative at sales@redislabs.com.
 
 ## <a id='references'></a>References
-1. [Getting Started with Redis<sup>e</sup> Pack](https://redislabs.com/redis-enterprise-documentation/quick-setup/)
-1. [Cluster Administration](https://redislabs.com/redis-enterprise-documentation/cluster-administration/)
-1. [Concepts & Architecture](https://redislabs.com/redis-enterprise-documentation/concepts-architecture/)
++ [Getting Started with Redis<sup>e</sup> Pack](https://redislabs.com/redis-enterprise-documentation/quick-setup/)
++ [Cluster Administration](https://redislabs.com/redis-enterprise-documentation/cluster-administration/)
++ [Concepts & Architecture](https://redislabs.com/redis-enterprise-documentation/concepts-architecture/)
