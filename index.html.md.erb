@@ -1,52 +1,49 @@
 ---
-title: Redis<sup>e</sup> Pack Service Broker for PCF
+title: Redis Enterprise Service Broker for PCF
 owner: Partners
 ---
 
-This documentation describes the Redis<sup>e</sup> Pack (RP) Service Broker for Pivotal Cloud Foundry (PCF). The RP Service Broker registers a service broker on PCF and exposes its service plans on the Marketplace. Developers can provision Redis databases by creating instances of the service plans using Apps Manager or the Cloud Foundry Command Line Interface (cf CLI).
-
-<p class="note warning"><strong>WARNING:</strong> Redis<sup>e</sup> Pack Service Broker for PCF v2.0.0 Beta is not intended for production use.
-   For production use, Redis Labs recommends Redis<sup>e</sup> Pack Service Broker for PCF v1.6.5.</p>
+This documentation describes the Redis Enterprise Software (RS) Service Broker for Pivotal Cloud Foundry (PCF). The Redis Enterprise Service Broker registers a service broker on PCF and exposes its service plans on the Marketplace. Developers can provision Redis databases by creating instances of the service plans using Apps Manager or the Cloud Foundry Command Line Interface (cf CLI).
 
 ## <a id="overview"></a> Overview
 
-Redis<sup>e</sup> Pack is an enterprise-grade cluster that acts as a container for managing and running multiple Redis databases in a highly available and scalable manner.
+Redis Enterprise is an enterprise-grade cluster that acts as a container for managing and running multiple Redis databases in a highly available and scalable manner.
 
-The Redis<sup>e</sup> Pack Service Broker exposes four service plans on the Marketplace. The service plans correspond to the following preconfigured database plans:
+The Redis Enterprise Service Broker exposes four service plans on the Marketplace. The service plans correspond to the following preconfigured database plans:
 
 * Simple Redis database: a single master shard.
 * Highly-available Redis database: master/slave shards or master/multi-slave shards.
 * Redis clustered database: multiple master shards.
 * Highly-available Redis clustered database: multiple master shards each with its own slave shard, or multiple master/multi-slave shards.
 
-For more information, see the [Redis<sup>e</sup> Pack documentation](https://redislabs.com/redis-enterprise-documentation/overview/).
+For more information, see the [Redis Enterprise documentation](https://redislabs.com/redis-enterprise-documentation/overview/).
 
 ## <a id="snapshot"></a>Product Snapshot
 
-The following table provides version and version-support information about Redis<sup>e</sup> Pack Service Broker for PCF.
+The following table provides version and version-support information about Redis Enterprise Service Broker for PCF.
 
 <table class="nice">
     <th>Element</th>
     <th>Details</th>
     <tr>
         <td>Version</td>
-        <td>v2.0.0</td>
+        <td>v5.0.200000013</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>September 18, 2017</td>
+        <td>March 19, 2017</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>Redis<sup>e</sup> Pack v5.0.0 Beta</td>
+        <td>vRedis Enterprise v5.0.1</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>v1.10</td>
+        <td>v1.12, 2.0</td>
     </tr>
     <tr>
-        <td>Compatible Elastic Runtime version(s)</td>
-        <td>v1.10</td>
+        <td>Compatible Pivotal Application Service version(s)</td>
+        <td>v1.12, 2.0</td>
     </tr>
     <tr>
         <td>IaaS support</td>
@@ -56,10 +53,9 @@ The following table provides version and version-support information about Redis
 
 ## <a id="reqs"></a>Requirements
 
-To use the Redis<sup>e</sup> Pack Service Broker, you must have a RP cluster already deployed.
-To do this, see [Installing and Configuring the Redis<sup>e</sup> Pack Service Broker](installing.html) for more information.
+To use the Redis Enterprise Service Broker, you must have a RS cluster already deployed. To do this, see the [Installing and Configuring the Redis Enterprise Service Broker](installing.html) topic for more information.
 
-Redis<sup>e</sup> Pack Service Broker for PCF requires a valid license from Redis Labs for the Redis<sup>e</sup> Pack cluster.
+Redis Enterprise Service for Pivotal Cloud Foundry requires a valid license from Redis Labs for the Redis Enterprise cluster.
 
 ## <a id="feedback"></a>Feedback
 
@@ -67,29 +63,30 @@ Please provide any bugs, feature requests, or questions to the [Pivotal Cloud Fo
 
 ## <a id='limitations'></a>Limitations
 
-At this time, Redis<sup>e</sup> Pack Service for PCF is limited to one cluster per deployment.
+At this time, Redis Enterprise Service for Pivotal Cloud Foundry is limited to one cluster per deployment.
 
-## <a id='release features'></a>Features of Redis Enterprise Pack v5.0
+5.0.0 is considered a beta release of Redis Enterprise and is not meant for production use.
 
-Redis<sup>e</sup> Pack Service Broker for PCF v2.0.0 is based on Redis<sup>e</sup> Pack v5.0 beta. 
-Redis<sup>e</sup> Pack v5.0 has five new, top features:
+## <a id='release-notes'></a>Release Notes
 
-+ Geo-distributed, active-active Redis apps with conflict-free replicated databases (CRDBs)
-+ Fast search and query in Redis with in-memory indexing
-+ Native JSON processing in Redis
-+ Integrated administrative account management with LDAP
-+ Integrated support for Redis Cluster API
+In this version of the Redis Enterprise Service Broker.
+=======
+There are five main features to highlight in this preview:
+1. Geo-distributed, Active-Active Redis Applications with Conflict-free Replicated Databases (CRDBs)
+1. Fast Search and Query in Redis with in-memory Indexing
+1. Native JSON processing in Redis
+1. Integrated Administrative Account Management with LDAP
+1. Integrated support for Redis' Cluster API
 
-In addition to these top features, Redis Enterprise Pack 5.0 also brings additional modules
-for indexing with bloom filters and many other improvements in core performance, scale, and high availability of general Redis apps.
+In addition to these top features, Redis Enterprise 5.0 also brings additional modules for indexing with bloom filters and many other improvements in core performance, scale, and high availability of general Redis applications.
 
-For this release, the tile version has been updated to match the version number of Redis<sup>e</sup> Pack itself.
+For this release, the tile version has been updated to match the version number of Redis Enterprise itself.
 
 ## <a id='license'></a>License
 
-For those interested in using Redis<sup>e</sup> Pack please go to [Redis Labs](https://redislabs.com/redis-enterprise). You are welcome to use Redis<sup>e</sup> Pack under the trial license limitations. To obtain a production license and support, contact a Redis Labs sales representative at sales@redislabs.com.
+For those interested in using Redis Enterprise please go to [Redis Labs](https://redislabs.com/redis-enterprise). You are welcome to use Redis Enterprise under the trial license limitations. To obtain a production license and support, contact a Redis Labs sales representative at sales@redislabs.com.
 
 ## <a id='references'></a>References
-+ [Getting Started with Redis<sup>e</sup> Pack](https://redislabs.com/redis-enterprise-documentation/quick-setup/)
-+ [Cluster Administration](https://redislabs.com/redis-enterprise-documentation/cluster-administration/)
-+ [Concepts & Architecture](https://redislabs.com/redis-enterprise-documentation/concepts-architecture/)
+1. [Getting Started with Redis Enterprise](https://redislabs.com/redis-enterprise-documentation/quick-setup/)
+1. [Cluster Administration](https://redislabs.com/redis-enterprise-documentation/cluster-administration/)
+1. [Concepts & Architecture](https://redislabs.com/redis-enterprise-documentation/concepts-architecture/)
