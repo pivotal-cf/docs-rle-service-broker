@@ -32,23 +32,27 @@ The following table provides version and version-support information about Redis
     <th>Details</th>
     <tr>
         <td>Version</td>
-        <td>v5.2.000000054</td>
+        <td>v5.4.22000163</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>September 7, 2018</td>
+        <td>May 7, 2019</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>vRedis Enterprise v5.2+</td>
+        <td>vRedis Enterprise v5.4.2-20</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
-        <td>v2.0.x, v2.1.x, v2.2.x, and v2.3.x</td>
+        <td>v2.2.x, v2.3.x, and v2.4.x</td>
     </tr>
     <tr>
         <td>Compatible Pivotal Application Service version(s)</td>
-        <td>v2.0.x, v2.1.x, v2.2.x, and v2.3.x</td>
+        <td>v2.2.x, v2.3.x, and v2.4.x</td>
+    </tr>
+    <tr>
+       <td>BOSH stemcell version</td>
+       <td>Ubuntu Xenial</td>
     </tr>
     <tr>
        <td>BOSH stemcell version</td>
@@ -59,8 +63,6 @@ The following table provides version and version-support information about Redis
         <td>AWS and vSphere</td>
     </tr>
 </table>
-
-<p class="note info">Note: The versioning for this tile has changed from v1.6.5 to v5.0.X to match the official Redis Enterprise pattern.</p>
 
 ## <a id="reqs"></a>Requirements
 
@@ -78,16 +80,9 @@ At this time, Redis Enterprise Service for Pivotal Cloud Foundry is limited to o
 
 ## <a id='release-notes'></a>Release Notes
 
-There are five main features to highlight in this preview:
-1. Geo-distributed, Active-Active Redis Applications with Conflict-free Replicated Databases (CRDBs)
-1. Fast Search and Query in Redis with in-memory Indexing
-1. Native JSON processing in Redis
-1. Integrated Administrative Account Management with LDAP
-1. Integrated support for Redis' Cluster API
+This release of the Redis Enterprise Service Broker requires Redis Enterprise Cluster release 5.4.0 and above.
+Support for Xenial Stemcells has been added with this release.
 
-In addition to these top features, Redis Enterprise 5.0 also brings additional modules for indexing with bloom filters and many other improvements in core performance, scale, and high availability of general Redis applications.
-
-For this release, the tile version has been updated to match the version number of Redis Enterprise itself.
 
 ## <a id='license'></a>License
 
