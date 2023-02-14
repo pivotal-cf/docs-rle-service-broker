@@ -37,33 +37,38 @@ After installing the Redis Enterprise Service Broker, Redis Enterprise appears a
 Follow the instructions below to create a Redis Enterprise Cluster service instance using Apps Manager.
 
 1. Navigate to Apps Manager in a browser and log in.
+
 1. Click **Marketplace**.
+
 1. Click **Redis Enterprise**.
+
 1. Choose one of the four preconfigured database plans and click **Select this plan**. For more information about the preconfigured plans, see the [Overview](index.html#overview).
+
 1. In the **Configure Instance** form, enter an **Instance Name** to identify the service instance in the deployment as well as the database name in RS. To override the default parameters and provide additional database configuration parameters, click **Show Advanced Options**. Contact support@redislabs.com for further instructions on using this feature.
+
 1. Once you create the service and bind it to an app, you can find the credentials in the `VCAP_SERVICES` environment variable in the following format:
 
-```
-"VCAP_SERVICES": {
-  "redislabs-enterprise-cluster": [
-   {
-    "credentials": {
-     "host": "redis-12345.pcf-rlec.redislabs.com",
-     "ip_list": [
-      "10.0.0.171"
-     ],
-     "password": "some-redis-password",
-     "port": 12345
-    },
-    "label": "redislabs-enterprise-cluster",
-    "name": "my-redis-db",
-    "plan": "ha-redis",
-    "provider": null,
-    "syslog_drain_url": null,
-    "tags": [
-     "redislabs"
+  ```
+  "VCAP_SERVICES": {
+    "redislabs-enterprise-cluster": [
+     {
+      "credentials": {
+       "host": "redis-12345.pcf-rlec.redislabs.com",
+       "ip_list": [
+        "10.0.0.171"
+       ],
+       "password": "some-redis-password",
+       "port": 12345
+      },
+      "label": "redislabs-enterprise-cluster",
+      "name": "my-redis-db",
+      "plan": "ha-redis",
+      "provider": null,
+      "syslog_drain_url": null,
+      "tags": [
+       "redislabs"
+      ]
+     }
     ]
-   }
-  ]
-}
-```
+  }
+  ```
